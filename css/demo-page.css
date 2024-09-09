@@ -1,0 +1,630 @@
+.report-block {
+  margin-block-end: 25px;
+  border-radius: var(--br-radius);
+  background: var(--color-light-alt);
+  padding: 25px;
+  line-height: 2;
+  text-align: center;
+}
+
+.information {
+  border: 1px solid var(--color-gray);
+  border-radius: var(--br-radius);
+  padding: 30px 20px;
+}
+
+.information__check-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 20px;
+  border-radius: var(--br-radius);
+  background: var(--color-accent-alt);
+  block-size: 50px;
+  color: var(--color-light);
+}
+
+.inforamtion__main-car-info-wrapper {
+  margin-block-end: 15px;
+}
+
+.information__model-car {
+  margin-block-end: 15px;
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.information__car-logo {
+  margin: 0 auto 10px;
+}
+
+.inforamtion__list-line {
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+}
+
+.information__info-list-key {
+  font-weight: 700;
+}
+
+.information__car-img-wrapper {
+  margin-block-end: 15px;
+}
+
+.information__car-img {
+  margin-inline: auto;
+  margin-block-end: 5px;
+}
+
+.information__car-img-warning {
+  color: var(--color-dark-gray);
+  font-size: 13px;
+  text-align: center;
+}
+
+.information__alert-block {
+  display: flex;
+  row-gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.information__alert-text {
+  color: var(--color-red-alt);
+  font-size: 13px;
+}
+
+.information__data-registration-block {
+  margin-block-end: 35px;
+}
+
+.information__title-block {
+  margin-block-end: 15px;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.information__descr-list {
+  margin-block-end: 20px;
+}
+
+.information__list-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 14px;
+}
+
+.information__list-line:not(:last-child) {
+  margin-block-end: 14px;
+}
+
+.information__list-key {
+  border-bottom: 1px dotted var(--color-dark-alt);
+  padding-block-end: 3px;
+  inline-size: 100%;
+  color: var(--color-dark-gray-alt);
+}
+
+.information__list-key--data {
+  display: flex;
+  column-gap: 5px;
+}
+
+.icon {
+  inline-size: 18px;
+  block-size: 18px;
+}
+
+.information__list-value {
+  padding: 10px 0 0 5px;
+  color: var(--color-black);
+  text-wrap: nowrap;
+}
+
+.information__list-value--green {
+  color: var(--color-green);
+  font-style: italic;
+}
+
+.information__list-value--red {
+  color: var(--color-red-alt);
+  font-style: italic;
+}
+
+.information__disclaimer {
+  margin-block-end: 20px;
+  color: var(--color-dark-gray);
+  font-size: 14px;
+}
+
+.information__checkbox-label {
+  display: flex;
+  column-gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.information__data-verification-custom-checkbox {
+  display: inline-block;
+  position: relative;
+  border: 1px solid var(--color-dark-gray-alt);
+  border-radius: 2px;
+  aspect-ratio: 1 / 1;
+  inline-size: 13px;
+}
+
+.information__data-verification-custom-checkbox::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  background: url(../media/icons/check.svg) center/contain no-repeat;
+  aspect-ratio: 1/1;
+  inline-size: 13px;
+  content: '';
+}
+
+.information__data-verification-checkbox:checked + .information__data-verification-custom-checkbox {
+  border: var(--color-accent-alt);
+  background-color: var(--color-accent-alt);
+}
+
+.information__mileage-details {
+  margin-block-end: 15px;
+}
+
+.information__mileage-table {
+  border-collapse: collapse;
+  inline-size: 100%;
+}
+
+.information__mileage-table-title {
+  text-align: left;
+}
+
+.information__mileage-table-title--number {
+  inline-size: 200px;
+}
+
+.information__mileage-table-title--mileage {
+  inline-size: 110px;
+}
+
+.information__history-owners {
+  margin-block-end: 40px;
+}
+
+.information__history-owners-line {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+}
+
+.information__history-owners-line:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.information__history-owners-number {
+  position: relative;
+}
+
+.information__history-owners-number::after {
+  display: block;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: calc(50% - 2.5px);
+  background: var(--color-dec-elem);
+  inline-size: 5px;
+  block-size: 80px;
+  content: '';
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid var(--color-orange-alt);
+  border-radius: 50%;
+  background: var(--color-orange);
+  inline-size: 28px;
+  block-size: 28px;
+  color: var(--color-light);
+  font-weight: 600;
+}
+
+.information__history-last-owner {
+  position: relative;
+  margin-inline-start: 55px;
+  border-radius: var(--br-radius);
+  background: var(--color-light-alt);
+  padding: 10px;
+}
+
+.information__title-block--insurance {
+  margin-block-end: 25px;
+}
+
+.information__history-last-owner::before {
+  display: block;
+  position: absolute;
+  top: calc(50% + 2.5px);
+  right: 100%;
+  background: var(--color-dec-elem);
+  inline-size: 40px;
+  block-size: 5px;
+  content: '';
+}
+
+.information__number-part-wrapper {
+  position: relative;
+}
+
+.information__number-part {
+  margin: 0 auto 25px;
+}
+
+.information__number-part::before {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: 0;
+  z-index: -1;
+  background: var(--color-dec-elem);
+  inline-size: 100%;
+  block-size: 5px;
+  content: '';
+}
+
+.information__data-list {
+  margin-block-end: 25px;
+  font-size: 14px;
+}
+
+.information__data-line:not(:last-child) {
+  margin-block-end: 15px;
+}
+
+.information__data-key {
+  font-weight: 700;
+}
+
+.information__characteristics-scheme {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-block-end: 25px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--br-radius);
+  padding: 30px 20px;
+}
+
+.information__scheme-img-side-wrapper {
+  display: flex;
+  align-items: center;
+  margin-block-end: 27px;
+}
+
+.information__scheme-side-height {
+  position: relative;
+  background: white;
+}
+
+.information__scheme-side-height::after {
+  display: block;
+  position: absolute;
+  bottom: calc(50% - 61px);
+  left: calc(50% - 4px);
+  z-index: -1;
+  background: url(../media/icons/scheme-arrow-vertical.svg) center/contain no-repeat;
+  inline-size: 8px;
+  block-size: 118px;
+  content: '';
+}
+
+.information__scheme-side-width {
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: 280px;
+  text-align: center;
+}
+
+.information__scheme-side-width::after {
+  display: block;
+  position: absolute;
+  top: -10px;
+  background: url(../media/icons/scheme-arrow-horizontal.svg) center/contain no-repeat;
+  inline-size: 100%;
+  max-inline-size: 280px;
+  block-size: 7px;
+  content: '';
+}
+
+.information__scheme-front {
+  position: relative;
+}
+
+.information__front-height-wrapper {
+  position: absolute;
+  top: calc(50% + 19px);
+  right: -24px;
+}
+
+.information__scheme-img-front-wrapper {
+  display: flex;
+  margin-block-end: 27px;
+}
+
+.information__scheme-front-height {
+  position: relative;
+}
+
+.information__scheme-front-height::before {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  transform: rotate(180deg);
+  background: url(../media/icons/scheme-arrow-height.svg) center/contain no-repeat;
+  inline-size: 8px;
+  block-size: 20px;
+  content: '';
+}
+
+.information__scheme-front-height::after {
+  position: absolute;
+  right: 0;
+  bottom: calc(50% - 25px);
+  background: url(../media/icons/scheme-arrow-height.svg) center/contain no-repeat;
+  inline-size: 8px;
+  block-size: 20px;
+  content: '';
+}
+
+.information__scheme-front-width {
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: 168px;
+  text-align: center;
+}
+
+.information__scheme-front-width::after {
+  display: block;
+  position: absolute;
+  top: -10px;
+  background: url(../media/icons/scheme-arrow-horizontal.svg) center/contain no-repeat;
+  inline-size: 100%;
+  max-inline-size: 168px;
+  block-size: 7px;
+  content: '';
+}
+
+.information__grade {
+  margin-block-end: 35px;
+}
+
+.information__title-block--grade {
+  margin-block-end: 25px;
+}
+
+.information__grade-average-price {
+  position: relative;
+  margin-inline: auto;
+  margin-block-end: 20px;
+  border-radius: var(--br-radius);
+  background: var(--color-light-blue);
+  padding: 15px;
+  inline-size: 100%;
+  max-inline-size: 360px;
+  color: var(--color-light);
+}
+
+.information__grade-average-price::after {
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px);
+  rotate: 180deg;
+  clip-path: polygon(100% 100%, 50% 25%, 0 100%);
+  background: var(--color-light-blue);
+  inline-size: 20px;
+  block-size: 10px;
+  content: '';
+}
+
+.information__grade-average-price-text {
+  display: flex;
+  row-gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information__grade-average-price-numbers {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.information__grade-text-question {
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.information__grade-text-answer {
+  margin-block-end: 8px;
+  color: var(--color-dark-gray-alt);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.information__grade-text-list {
+  padding-inline-start: 20px;
+}
+
+.information__grade-text-list-item {
+  position: relative;
+  font-weight: 300;
+}
+
+.information__grade-text-list-item:not(:last-child) {
+  margin-block-end: 8px;
+}
+
+.information__grade-text-list-item::before {
+  display: block;
+  position: absolute;
+  bottom: calc(50% - 7px);
+  left: -20px;
+  background: url(../media/icons/check-green.svg) center/contain no-repeat;
+  aspect-ratio: 1/1;
+  inline-size: 14px;
+  content: '';
+}
+
+.information__title-block--announcement {
+  margin-block-end: 15px;
+}
+
+.information__descr-list--announcement {
+  margin-block-end: 30px;
+}
+
+.information__car-model {
+  margin-block-end: 10px;
+  font-weight: 700;
+}
+
+.information__car-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+  margin-block-end: 25px;
+}
+
+.information__announcement-car-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.information__announcement-text {
+  margin-block-end: 30px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.information__announcement-price-text {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.information__announcement-price {
+  font-weight: 700;
+}
+
+.information__auctions-data-list {
+  margin-block-end: 30px;
+}
+
+.information__auctions-list-line {
+  display: flex;
+  column-gap: 5px;
+}
+
+.information__auctions-list-key {
+  font-weight: 700;
+}
+
+.information__echipament-list {
+  margin-block-end: 20px;
+}
+
+.information__echipament-list-item {
+  display: flex;
+  position: relative;
+  column-gap: 15px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.information__echipament-list-item:not(:last-child) {
+  margin-block-end: 8px;
+}
+
+.information__echipament-list-item::before {
+  display: flex;
+  border-radius: 50%;
+  background: black;
+  aspect-ratio: 1 / 1;
+  inline-size: 5px;
+  content: '';
+}
+
+.information__descr-list--announcement {
+  margin-block-end: 25px;
+}
+
+.information__clarification-wrapper {
+  margin-block-end: 15px;
+}
+
+.information__clarification {
+  color: var(--color-dark-gray-alt);
+  font-size: 13px;
+}
+
+.information__clarification:not(:last-child) {
+  margin-block-end: 5px;
+}
+
+.information__clarification-decoration {
+  color: var(--color-red);
+}
+
+.icon--not-found {
+  inline-size: 100%;
+  max-inline-size: 120px;
+  block-size: 100%;
+  max-block-size: 120px;
+  margin-inline: auto;
+  display: block;
+  margin-block-end: 50px;
+}
+
+.not-found {
+  text-align: center;
+  padding-block: 50px;
+}
+
+.not-found__title {
+  font-size: 30px;
+  color: var(--color-not-found);
+  margin-block-end: 10px;
+}
+
+.not-found__text {
+  font-size: 14px;
+  color: var(--color-dark-blue);
+  margin-block-end: 30px;
+}
+
+@media (hover: hover) {
+  .information__check-button:hover {
+    opacity: 0.8;
+    transition: var(--transition-duration);
+  }
+}
+
+@media (hover: active) {
+  .information__check-button:active {
+    transition: var(--transition-duration);
+  }
+}
