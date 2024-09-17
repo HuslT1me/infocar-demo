@@ -230,40 +230,46 @@
           </div>
           <div class="information__mileage-details">
             <h2 class="information__title-block information__title-block--mileage-details">История фиксации пробега</h2>
-            <table class="information__mileage-table">
-              <thead class="information__mileage-table-title-line">
-                <tr>
-                  <th class="information__mileage-table-title information__mileage-table-title--number">&#8470;</th>
-                  <th class="information__mileage-table-title information__mileage-table-title--date">Дата фиксации</th>
-                  <th class="information__mileage-table-title information__mileage-table-title--mileage">Пробег</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="information__mileage-table-line">
-                  <td rowspan="1" colspan="1">1</td>
-                  <td>27 апр. 2021</td>
-                  <td>312 600 км.</td>
-                </tr>
-                <tr class="information__mileage-table-line">
-                  <td>2</td>
-                  <td>27 июн. 2021</td>
-                  <td>240 400 км.</td>
-                </tr>
-                <!-- <tr class="information__mileage-table-warn">
-                  <td>
-                    <img src="" alt="" />
-                    <p class="information__mileage-warn-text">
-                      Найдено несоответствие показаний одометра в истории. Возможно намеренное изменение пробега
-                    </p>
-                  </td>
-                </tr> -->
-                <tr class="information__mileage-table-warn">
-                  <td>3</td>
-                  <td>22 июл. 2023</td>
-                  <td>280 816 км.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style="width: 500px; overflow: auto;">
+
+              <table class="information__mileage-table">
+                <thead class="information__mileage-table-title-line">
+                  <tr>
+                    <th class="information__mileage-table-title information__mileage-table-title--number">&#8470;</th>
+                    <th class="information__mileage-table-title information__mileage-table-title--date">Дата фиксации</th>
+                    <th class="information__mileage-table-title information__mileage-table-title--mileage">Пробег</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>27 апр. 2021</td>
+                    <td>312 600 км.</td>
+                  </tr>
+                  <tr class="information__mileage-table-line--warn">
+                    <td>2</td>
+                    <td>27 июн. 2021</td>
+                    <td>240 400 км.</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <div class="information__mileage-table-warn">
+                        <img src="../media/icons/alert.png" width="18" height="16" alt="" />
+                        <p class="information__mileage-warn-text">
+                          Найдено несоответствие показаний одометра в истории. Возможно намеренное изменение пробега
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>22 июл. 2023</td>
+                    <td>280 816 км.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- canvas-graphics -->
           </div>
           <div class="information__history-owners">
             <h2 class="information__title-block information__title-block--history-owners">История смены владельцев</h2>
@@ -481,7 +487,45 @@
                   <span class="information__grade-average-price-numbers"> 5 000 - 5 400 eur </span>
                 </p>
               </div>
-              <!-- здесь свг с цениками -->
+              <div class="information__grade-decoration">
+                <div class="information__grade-decoration-inner">
+                  <svg data-testid="indicator-full-IN" class="information__grade-price-svg">
+                    <path
+                      class="side-triangles"
+                      stroke-width="2"
+                      d="M37,28.1c0.8-0.6,1.8-0.8,2.7-0.6c0.9,0.2,1.8,0.7,2.3,1.5l0,0l39.8,61.9c0.5,0.8,0.8,1.8,0.8,2.8 c0,1.4-0.6,2.8-1.5,3.7c-1,1-2.3,1.5-3.7,1.5l0,0h-73c-1,0-1.9-0.4-2.5-1.1c-0.6-0.6-1-1.5-0.9-2.5C2.4,69.2,21.6,39.4,37,28.1z M100.1,1c14.6,0,27.7,3.4,41.4,10.6c0.9,0.5,1.5,1.3,1.8,2.3c0.3,1,0.1,2-0.4,2.9l0,0 l-38.5,62.9c-0.4,0.7-1,1.3-1.7,1.7c-1.2,0.8-2.7,0.9-4,0.6c-1.3-0.3-2.5-1.1-3.2-2.4l0,0l-38.3-63c-0.5-0.9-0.7-1.9-0.4-2.8 c0.2-0.9,0.8-1.8,1.7-2.3C70.7,4.3,85.4,1,100.1,1z M160.3,27.4c0.9-0.2,1.9,0,2.7,0.6c15.4,11.3,34.6,41.1,36,67.4c0.1,1-0.3,1.8-0.9,2.5 c-0.6,0.7-1.5,1.1-2.5,1.1l0,0h-73c-1.4,0-2.8-0.6-3.7-1.5c-1-1-1.5-2.3-1.5-3.7c0-1,0.3-2,0.8-2.8l0,0L158,29 C158.5,28.1,159.4,27.6,160.3,27.4z"
+                    ></path>
+                    <g data-testid="filling" fill="#0071ce">
+                      $
+                      <path
+                        data-testid="draw-in"
+                        class="central-triangle"
+                        d="M105.212 80.16l38.54-62.867c1.411-2.301.587-5.365-1.754-6.59C128.089 3.427 114.914 0 100.103 0 85.237 0 70.332 3.391 57.829 10.653c-2.217 1.288-2.947 4.25-1.589 6.483l38.303 63.005a6.25 6.25 0 0010.67.02z"
+                      ></path>
+                    </g>
+                    <defs>
+                      <filter id="prefix__a" width="189.3%" height="189.3%" x="-44.6%" y="-41.1%">
+                        <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                        <feGaussianBlur
+                          in="shadowOffsetOuter1"
+                          result="shadowBlurOuter1"
+                          stdDeviation="8"
+                        ></feGaussianBlur>
+                        <feColorMatrix
+                          in="shadowBlurOuter1"
+                          values="0 0 0 0 0.00784313725 0 0 0 0 0.0117647059 0 0 0 0 0.0352941176 0 0 0 0.32 0"
+                        ></feColorMatrix>
+                      </filter>
+                      <circle id="prefix__b" cx="100" cy="100" r="28"></circle>
+                    </defs>
+                    <g data-testid="site-logo" fill="none" fill-rule="evenodd" transform="translate(72 72)"></g>
+                  </svg>
+                  <p class="information__grade-price-triangle information__grade-price-triangle--left">5000</p>
+                  <p class="information__grade-price-triangle information__grade-price-triangle--central">5200</p>
+                  <p class="information__grade-price-triangle information__grade-price-triangle--right">5400</p>
+                  <img class="information__grade-logo" width="100" height="35" src="../media/icons/infocarLogo.svg" alt="">
+                </div>
+              </div>
             </div>
             <div class="information__grade-text-info">
               <p class="information__grade-text-question">Как подсчитана?</p>

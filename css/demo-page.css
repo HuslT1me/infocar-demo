@@ -184,7 +184,8 @@
 }
 
 .information__mileage-table {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 10px;
   inline-size: 100%;
 }
 
@@ -193,11 +194,26 @@
 }
 
 .information__mileage-table-title--number {
-  inline-size: 200px;
+  inline-size: 43%;
 }
 
 .information__mileage-table-title--mileage {
   inline-size: 110px;
+}
+
+.information__mileage-table-line--warn td:last-child {
+  color: var(--color-red-alt);
+  font-weight: 700;
+}
+
+.information__mileage-table-warn {
+  display: flex;
+}
+
+.information__mileage-warn-text {
+  color: var(--color-red-alt);
+  font-size: 13px;
+  text-align: center;
 }
 
 .information__history-owners {
@@ -430,7 +446,7 @@
 .information__grade-average-price::after {
   display: block;
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   left: calc(50% - 10px);
   rotate: 180deg;
   clip-path: polygon(100% 100%, 50% 25%, 0 100%);
@@ -445,11 +461,68 @@
   row-gap: 5px;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .information__grade-average-price-numbers {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.information__grade-decoration {
+  margin-block-end: 10px;
+}
+
+.information__grade-decoration-inner {
+  position: relative;
+  display: block;
+  margin-inline: auto;
+  inline-size: 200px;
+}
+
+.information__grade-price-svg {
+  inline-size: inherit;
+  block-size: 100px;
+}
+
+.side-triangles {
+  fill: transparent;
+  stroke: var(--color-dark-gray-alt);
+}
+
+.central-triangle {
+  stroke: var(--color-accent);
+  fill: var(--color-accent);
+}
+
+.information__grade-price-triangle {
+  display: block;
+  position: absolute;
+  top: 73px;
+  inline-size: 65px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.information__grade-price-triangle--left {
+  left: 5px;
+  color: var(--color-green);
+}
+
+.information__grade-price-triangle--central {
+  top: 15px;
+  left: calc(50% - 31px);
+  inline-size: 62px;
+  color: var(--color-light);
+}
+
+.information__grade-price-triangle--right {
+  right: 5px;
+  color: var(--color-red-alt);
+}
+
+.information__grade-logo { 
+  margin-inline: auto;
 }
 
 .information__grade-text-question {
@@ -590,30 +663,30 @@
 }
 
 .icon--not-found {
+  display: block;
+  margin-inline: auto;
+  margin-block-end: 50px;
   inline-size: 100%;
   max-inline-size: 120px;
   block-size: 100%;
   max-block-size: 120px;
-  margin-inline: auto;
-  display: block;
-  margin-block-end: 50px;
 }
 
 .not-found {
-  text-align: center;
   padding-block: 50px;
+  text-align: center;
 }
 
 .not-found__title {
-  font-size: 30px;
-  color: var(--color-not-found);
   margin-block-end: 10px;
+  color: var(--color-not-found);
+  font-size: 30px;
 }
 
 .not-found__text {
-  font-size: 14px;
-  color: var(--color-dark-blue);
   margin-block-end: 30px;
+  color: var(--color-dark-blue);
+  font-size: 14px;
 }
 
 @media (hover: hover) {
