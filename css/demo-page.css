@@ -76,6 +76,7 @@
 .information__alert-text {
   color: var(--color-red-alt);
   font-size: 13px;
+  text-align: center;
 }
 
 .information__data-registration-block {
@@ -116,11 +117,6 @@
 .information__list-key--data {
   display: flex;
   column-gap: 5px;
-}
-
-.icon {
-  inline-size: 18px;
-  block-size: 18px;
 }
 
 .information__list-value {
@@ -182,6 +178,11 @@
 .information__mileage-details {
   margin-block-end: 15px;
 }
+
+/* .information__table-wrapper {
+  overflow-x: auto;
+  inline-size: 558px;
+} */
 
 .information__mileage-table {
   border-collapse: separate;
@@ -474,8 +475,8 @@
 }
 
 .information__grade-decoration-inner {
-  position: relative;
   display: block;
+  position: relative;
   margin-inline: auto;
   inline-size: 200px;
 }
@@ -521,7 +522,7 @@
   color: var(--color-red-alt);
 }
 
-.information__grade-logo { 
+.information__grade-logo {
   margin-inline: auto;
 }
 
@@ -687,6 +688,42 @@
   margin-block-end: 30px;
   color: var(--color-dark-blue);
   font-size: 14px;
+}
+
+@media (768px > width) {
+  .information__characteristics-scheme {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+  }
+
+  .information__characteristics-scheme img {
+    block-size: auto;
+  }
+}
+
+@media (500px > width) {
+  .information__table-wrapper {
+    overflow-x: auto;
+  }
+
+  .information__mileage-table {
+    inline-size: 150%;
+  }
+}
+
+@media (400px > width) {
+  .information__list-line {
+    flex-direction: column;
+  }
+
+  .information__list-value {
+    text-wrap: balance;
+  }
+
+  .information__car-gallery {
+    gap: 10px;
+  }
 }
 
 @media (hover: hover) {

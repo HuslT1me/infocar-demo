@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru_RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проверка авто по гос.номеру регистрации или VIN коду - infocar.md</title>
+    <link rel="stylesheet" href="../css/fonts/fonts.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__main-content">
+        <header class="header">
+          <div class="container">
+            <div class="header__inner">
+              <a class="header__partner-logo" href="#">
+                <img class="header__partner-logo-img" src="../media/icons/999-logo.svg" width="71" height="44" alt="" />
+              </a>
+              <div class="header__main-content">
+                <div class="header__language-block">
+                  <a class="header__logo-link nav-language" data-lng="ro" href="#">ro</a>
+                  <a class="header__logo-link nav-language active" data-lng="ru" href="#">ru</a>
+                </div>
+                <div class="header__burger-block">
+                  <button class="header__burger-btn" type="button">
+                    <span class="visually-hidden">Open menu</span>
+                  </button>
+                </div>
+              </div>
+              <a class="header__project-logo" href="#">
+                <img
+                  class="header__project-logo-img"
+                  src="../media/icons/infocarLogo.svg"
+                  width="120"
+                  height="44"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container">
+            <section class="report">
+              <h1 class="report__title">Отчеты по истории автомобиля</h1>
+              <div class="report__inner">
+                <div class="report__example-block">
+                  <a href="./pages/demo-md.html" class="report-button"> Молдова пример </a>
+                  <div class="report__example-price-block">
+                    <del class="report__example-old-price">149 лей</del>
+                    <span class="report__example-new-price">99 лей</span>
+                  </div>
+                </div>
+                <div class="report__example-block">
+                  <a href="./pages/demo-us.html" class="report-button"> США пример </a>
+                  <div class="report__example-price-block">
+                    <del class="report__example-old-price">299 лей</del>
+                    <span class="report__example-new-price">199 лей</span>
+                  </div>
+                </div>
+                <div class="report__example-block">
+                  <a href="#" class="report-button"> ЕС пример </a>
+                  <div class="report__example-price-block">
+                    <del class="report__example-old-price">399 лей</del>
+                    <span class="report__example-new-price">299 лей</span>
+                  </div>
+                </div>
+                <div class="report__example-block">
+                  <a href="./pages/demo-kr.html" class="report-button"> Корея пример </a>
+                  <div class="report__example-price-block">
+                    <del class="report__example-old-price">149 лей</del>
+                    <span class="report__example-new-price">99 лей</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="search main-section">
+              <form class="form">
+                <div class="search__automobile">
+                  <div class="search__idnv-block">
+                    <svg class="icon icon--notification" width="120" height="120">
+                      <use href="../media/icons/sprite.svg#notification"></use>
+                    </svg>
+                    <div class="search__idnv-message">
+                      <h3 class="search__idnv-alert">Недостаточно информации для формирования отчёта</h3>
+                      <p class="search__idnv-description">Для уточнения данных необходимо ввести IDNV</p>
+                      <a class="search__idnv-link" href="#" id="modal-button">где найти IDNV код?</a>
+                    </div>
+                    <input class="input" type="text" placeholder="Введите IDNV" />
+                    <button class="button button--idnv">Проверить</button>
+                  </div>
+                  <div class="search__checkbox-wrapper">
+                    <label class="search__state-number">
+                      <input
+                        class="checkbox-hidden search__checkbox--state visually-hidden"
+                        type="radio"
+                        value="state-number"
+                        name="search"
+                        checked
+                      />
+                      <span class="custom-checkbox"></span>
+                      Найти по гос.номеру
+                    </label>
+                    <label class="search__vin-code label-custom-checkbox">
+                      <input
+                        class="search__checkbox search__checkbox--vin checkbox-hidden visually-hidden"
+                        type="radio"
+                        value="vin-code"
+                        name="search"
+                      />
+                      <span class="search__custom-checkbox custom-checkbox"></span>
+                      Найти по VIN коду
+                    </label>
+                  </div>
+                  <div class="input-wrapper input-wrapper--state">
+                    <span class="search__input-flag-decor">
+                      <img class="search__input-flag-img" src="../media/icons/flag-md.svg" alt="" />
+                      MD
+                    </span>
+                    <input class="input input--state" type="text" />
+                  </div>
+                  <div class="input-wrapper input-wrapper--vin">
+                    <input class="input input--vin" type="text" placeholder="Введите VIN-код" />
+                  </div>
+                </div>
+                <div class="phone-number">
+                  <label class="label label--phone-number"> Введите номер телефона </label>
+                  <div class="input-wrapper input-wrapper--phone-number">
+                    <span class="phone-number__input-decor-prefix">
+                      <img class="phone-number__input-flag-img" src="../media/icons/flag-md.svg" alt="" />
+                      +373
+                    </span>
+                    <input class="input input--phone-number" type="tel" />
+                  </div>
+                </div>
+                <div class="password">
+                  <label class="label label--password"> Пароль (СМС код) - 6 цифр </label>
+                  <div class="input-wrapper">
+                    <button class="password__input-pass-control" type="button">
+                      <span class="visually-hidden">Показать пароль</span>
+                    </button>
+                    <input class="input input--password" type="password" placeholder="Введите СМС код" maxlength="6" />
+                  </div>
+                  <div class="password__restore-block" id="forgot">
+                    <p class="password__restore-text">Удалили СМС?</p>
+                    <a class="button button--restore" href="#">Восстановить</a>
+                  </div>
+                </div>
+                <div class="search__agreement-block">
+                  <label class="search__agreement-label">
+                    <input class="search__agreement-checkbox visually-hidden" type="checkbox" />
+                    <span class="search__agreement-custom-checkbox"></span>
+                    <div class="search__agreement-text">
+                      Я принимаю <a class="search__agreement-link" href="#"> Лицензионное соглашение </a>
+                    </div>
+                  </label>
+                </div>
+                <button class="button button--alt" type="submit">Проверить</button>
+              </form>
+            </section>
+            <section class="contacts">
+              <div class="contacts__content-wrapper">
+                <p class="contacts__mail-text">Email</p>
+                <a class="button button--mail" href="#">support@infocar.md</a>
+              </div>
+              <div class="contacts__content-wrapper">
+                <p class="contacts__whatsapp-text">Support</p>
+                <a class="button button--whatsapp" href="#"> WhatsApp </a>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__top-line">
+                <div class="footer__compliance">
+                  <div class="footer__agreement-block">
+                    <p class="footer__agreement-text">Оплачивая отчёт, вы принимаете</p>
+                    <a class="footer__link footer__link--agreement" href="#">Лицензионное соглашение</a>
+                  </div>
+                  <div class="footer__privacy-block">
+                    <a class="footer__link footer__link--privacy" href="#">Политика конфеденциальности</a>
+                  </div>
+                </div>
+                <div class="footer__logos-block">
+                  <div class="footer__logos-inner">
+                    <a class="footer__logo footer__logo--partner" href="#">
+                      <img src="../media/icons/999-logo-footer.svg" width="38" height="23" alt="" />
+                    </a>
+                    <a class="footer__logo footer__logo--project" href="#">
+                      <img src="../media/icons/infocarLogo-footer.svg" width="101" height="36" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__bottom-line">
+                <a class="footer__link footer__link--privacy" href="#">Информация о cookies</a>
+                <p class="footer__copyright-text">&copy; 2024. infocar.md</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="burger-content active">
+        <div class="burger-content__login-status">
+          <svg class="icon icon--not-login" width="18" height="18">
+            <use href="../media/icons/sprite.svg#not-login"></use>
+          </svg>
+          <p class="burger-content__login-text">Вход не выполнен</p>
+        </div>
+        <div class="burger-content__links-wrapper">
+          <a class="burger-content__enter-account" href="#">Вход</a>
+          <a class="burger-content__feedback" href="#">Напишите нам</a>
+        </div>
+        <div class="burger-content__reports">
+          <p class="burger-content__report-text">Образцы отчетов:</p>
+          <a class="report-button report-button--alt button" href="./pages/demo-md.html"> Молдова пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-us.html"> США пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-kr.html"> Корея пример </a>
+        </div>
+        <div class="contacts contacts--burger">
+          <div class="contacts__content-wrapper">
+            <p class="contacts__mail-text">Email</p>
+            <a class="button" href="#">support@infocar.md</a>
+          </div>
+          <div class="contacts__content-wrapper">
+            <p class="contacts__whatsapp-text">Support</p>
+            <a class="button button--whatsapp" href="#"> WhatsApp </a>
+          </div>
+        </div>
+      </div>
+      <dialog class="dialog">
+        <div class="dialog__inner">
+          <button class="dialog__button-close" id="close-modal" type="button" role="button">
+            <svg class="icon icon--cross" width="16" height="16">
+              <use href="../media/icons/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="dialog__img-wrapper">
+            <img class="dialog__img" src="../media/sample.webp" alt="sample-idnv" />
+          </div>
+        </div>
+      </dialog>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

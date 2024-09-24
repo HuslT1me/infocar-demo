@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Проверка авто по гос.номеру регистрации или VIN коду - infocar.md</title>
-    <link rel="stylesheet" href="../css/fonts/fonts.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/demo-page.css" />
+    <link rel="stylesheet" href="../../css/fonts/fonts.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/pers-cabinet.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -59,15 +59,24 @@
         </header>
         <main class="main">
           <div class="container">
-            <section class="not-found">
-              <svg class="icon icon--not-found">
-                <use href="../media/icons/sprite.svg#not-found"></use>
-              </svg>
-              <div class="not-found__content">
-                <h1 class="not-found__title">Автомобиль не найден</h1>
-                <p class="not-found__text">Автомобиль не найден в базах Молдавии. Запросите другой автомобиль.</p>
+            <div class="title-block">
+              <h1 class="title">Мои отчеты</h1>
+            </div>
+            <section class="pers-cabinet main-section">
+              <div class="pers-cabinet__inner">
+                <p class="pers-cabinet-text">Актуальных отчетов нет...</p>
+                <button class="button button--alt">Перейти к проверке</button>
               </div>
-              <button class="button button--alt" type="submit">Вернуться к поиску</button>
+            </section>
+            <section class="contacts">
+              <div class="contacts__content-wrapper">
+                <p class="contacts__mail-text">Email</p>
+                <a class="button button--mail" href="#">support@infocar.md</a>
+              </div>
+              <div class="contacts__content-wrapper">
+                <p class="contacts__whatsapp-text">Support</p>
+                <a class="button button--whatsapp" href="#"> WhatsApp </a>
+              </div>
             </section>
           </div>
         </main>
@@ -103,7 +112,35 @@
           </div>
         </footer>
       </div>
+      <div class="burger-content active">
+        <div class="burger-content__login-status">
+          <svg class="icon icon--not-login" width="18" height="18">
+            <use href="../../media/icons/sprite.svg#not-login"></use>
+          </svg>
+          <p class="burger-content__login-text">Вход не выполнен</p>
+        </div>
+        <div class="burger-content__links-wrapper">
+          <a class="burger-content__enter-account" href="#">Вход</a>
+          <a class="burger-content__feedback" href="#">Напишите нам</a>
+        </div>
+        <div class="burger-content__reports">
+          <p class="burger-content__report-text">Образцы отчетов:</p>
+          <a class="report-button report-button--alt" href="./pages/demo-md.html"> Молдова пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-us.html"> США пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-kr.html"> Корея пример </a>
+        </div>
+        <div class="contacts contacts--burger">
+          <div class="contacts__content-wrapper">
+            <p class="contacts__mail-text">Email</p>
+            <a class="button button--mail" href="#"> support@infocar.md </a>
+          </div>
+          <div class="contacts__content-wrapper">
+            <p class="contacts__whatsapp-text">Support</p>
+            <a class="button button--whatsapp" href="#"> WhatsApp </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="../../../js/main.js"></script>
   </body>
 </html>

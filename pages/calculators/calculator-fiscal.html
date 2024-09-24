@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru_RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проверка авто по гос.номеру регистрации или VIN коду - infocar.md</title>
+    <link rel="stylesheet" href="../../css/fonts/fonts.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/calculator.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__main-content">
+        <header class="header">
+          <div class="container">
+            <div class="header__inner">
+              <a class="header__partner-logo" href="#">
+                <img
+                  class="header__partner-logo-img"
+                  src="../../media/icons/999-logo.svg"
+                  width="71"
+                  height="44"
+                  alt=""
+                />
+              </a>
+              <div class="header__logged-block">
+                <div class="header__wallet">
+                  <a class="header__wallet-link" href="#">
+                    <svg class="icon icon--wallet">
+                      <use href="../../media/icons/sprite.svg#wallet"></use>
+                    </svg>
+                    0 lei
+                  </a>
+                </div>
+              </div>
+              <div class="header__main-content">
+                <div class="header__language-block">
+                  <a class="header__logo-link nav-language" data-lng="ro" href="#">ro</a>
+                  <a class="header__logo-link nav-language active" data-lng="ru" href="#">ru</a>
+                </div>
+                <div class="header__burger-block">
+                  <button class="header__burger-btn" type="button">
+                    <span class="visually-hidden">Open menu</span>
+                  </button>
+                </div>
+              </div>
+              <a class="header__project-logo" href="#">
+                <img
+                  class="header__project-logo-img"
+                  src="../../media/icons/infocarLogo.svg"
+                  width="120"
+                  height="44"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <div class="container">
+            <div class="title-block">
+              <h1 class="title">Калькулятор дорожного налога</h1>
+            </div>
+            <section class="calculator main-section">
+              <form class="form">
+                <div class="form__data-block form__data-block--auto">
+                  <div class="form__data-block-inner">
+                    <label class="form__data-block-label"> Тип транспортного средства </label>
+                    <select class="form__data-block-select select" name="" id="">
+                      <option value="1">Легковой автомобиль</option>
+                      <option value="2">Автобус/Микроавтобус</option>
+                      <option value="3">Трактор</option>
+                      <option value="4">Грузовой автомобиль</option>
+                      <option value="5">Мотоцикл</option>
+                    </select>
+                  </div>
+                  <div class="form__data-block-inner">
+                    <label class="form__data-block-label"> Объём двигателя cm3: </label>
+                    <div class="form__input-wrapper form__input-wrapper--alt">
+                      <div class="form__additional-wrapper">
+                        <input class="form__data-block-input input" id="" />
+                        cm3
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__data-block-inner">
+                    <label class="form__data-block-label"> Разрешенная максимальная масca kg:</label>
+                    <div class="form__input-wrapper form__input-wrapper--alt">
+                      <div class="form__additional-wrapper">
+                        <input class="form__data-block-input input" id="" />
+                        kg
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__data-block-inner">
+                    <label class="form__data-block-label"> Максимальный разрешенный вес </label>
+
+                    <select class="form__data-block-select select" name="" id="">
+                      <option disabled selected>Выбрать</option>
+                      <option value="1">Меньше 3500 kg</option>
+                      <option value="2">3501 - 12000 kg</option>
+                      <option value="3">Более 12000 kg</option>
+                    </select>
+                  </div>
+                  <div class="form__data-block-inner">
+                    <label class="form__data-block-label"> Объём двигателя (cm3) </label>
+
+                    <select class="form__data-block-select select" name="" id="">
+                      <option disabled selected>Выбрать</option>
+                      <option value="1">Меньше 300 см3</option>
+                      <option value="2">Более 300 см3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__data-block form__data-block--owner">
+                  <h2 class="form__data-block-title">Владелец транспорта средства</h2>
+                  <div class="form__data-block-inner form__data-block-inner--radio">
+                    <div class="form__radio-wrapper">
+                      <input class="form__data-block-radio" type="radio" value="individual" name="owner" />
+                      <label class="form__label-radio"> Физическое лицо </label>
+                    </div>
+                    <div class="form__radio-wrapper">
+                      <input class="form__data-block-radio" type="radio" value="legal" name="owner" />
+                      <label class="form__label-radio"> Юридическое лицо </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__data-block form__data-block--location">
+                  <h2 class="form__data-block-title">Место жительства владельца</h2>
+                  <div class="form__data-block-inner form__data-block-inner--location">
+                    <select class="form__data-block-select select" name="" id="">
+                      <option disabled selected value="0">Выберите район</option>
+                      <option value="1">Chișinău</option>
+                      <option value="2">Anenii Noi</option>
+                      <option value="3">Bălţi</option>
+                      <option value="4">Basarabeasca</option>
+                      <option value="5">Bender</option>
+                      <option value="6">Briceni</option>
+                      <option value="7">Cahul</option>
+                      <option value="8">Călărasi</option>
+                      <option value="9">Cantemir</option>
+                      <option value="10">Căușeni</option>
+                      <option value="11">Cimişlia</option>
+                      <option value="12">Donduşeni</option>
+                      <option value="13">Drochia</option>
+                      <option value="14">Dubăsari</option>
+                      <option value="15">Edineț</option>
+                      <option value="16">Făleşti</option>
+                      <option value="17">Floreşti</option>
+                      <option value="18">Glodeni</option>
+                      <option value="19">Hînceşti</option>
+                      <option value="20">Ialoveni</option>
+                      <option value="21">Leova</option>
+                      <option value="22">Nisporeni</option>
+                      <option value="23">Ocnița</option>
+                      <option value="24">Ocnița</option>
+                      <option value="25">Orhei</option>
+                      <option value="25">Rezina</option>
+                      <option value="25">Rîşcani</option>
+                    </select>
+                    <select class="form__data-block-select select" name="" id="">
+                      <option disabled selected>Выберите город</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="button button--alt" type="submit">Рассчитать стоимость</button>
+              </form>
+            </section>
+            <section class="contacts">
+              <div class="contacts__content-wrapper">
+                <p class="contacts__mail-text">Email</p>
+                <a class="button button--mail" href="#">support@infocar.md</a>
+              </div>
+              <div class="contacts__content-wrapper">
+                <p class="contacts__whatsapp-text">Support</p>
+                <a class="button button--whatsapp" href="#"> WhatsApp </a>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__top-line">
+                <div class="footer__compliance">
+                  <div class="footer__agreement-block">
+                    <p class="footer__agreement-text">Оплачивая отчёт, вы принимаете</p>
+                    <a class="footer__link footer__link--agreement" href="#">Лицензионное соглашение</a>
+                  </div>
+                  <div class="footer__privacy-block">
+                    <a class="footer__link footer__link--privacy" href="#">Политика конфеденциальности</a>
+                  </div>
+                </div>
+                <div class="footer__logos-block">
+                  <div class="footer__logos-inner">
+                    <a class="footer__logo footer__logo--partner" href="#">
+                      <img src="../../media/icons/999-logo-footer.svg" width="38" height="23" alt="" />
+                    </a>
+                    <a class="footer__logo footer__logo--project" href="#">
+                      <img src="../../media/icons/infocarLogo-footer.svg" width="101" height="36" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__bottom-line">
+                <a class="footer__link footer__link--cookies" href="#">Информация о cookies</a>
+                <p class="footer__copyright-text">&copy; 2024. infocar.md</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="burger-content active">
+        <div class="burger-content__login-status">
+          <svg class="icon icon--not-login" width="18" height="18">
+            <use href="../media/icons/sprite.svg#not-login"></use>
+          </svg>
+          <p class="burger-content__login-text">Вход не выполнен</p>
+        </div>
+        <div class="burger-content__links-wrapper">
+          <a class="burger-content__enter-account" href="#">Вход</a>
+          <a class="burger-content__feedback" href="#">Напишите нам</a>
+        </div>
+        <div class="burger-content__reports">
+          <p class="burger-content__report-text">Образцы отчетов:</p>
+          <a class="report-button report-button--alt" href="./pages/demo-md.html"> Молдова пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-us.html"> США пример </a>
+          <a class="report-button report-button--alt" href="./pages/demo-kr.html"> Корея пример </a>
+        </div>
+        <div class="contacts contacts--burger">
+          <div class="contacts__content-wrapper">
+            <p class="contacts__mail-text">Email</p>
+            <a class="button button--mail" href="#"> support@infocar.md </a>
+          </div>
+          <div class="contacts__content-wrapper">
+            <p class="contacts__whatsapp-text">Support</p>
+            <a class="button button--whatsapp" href="#"> WhatsApp </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

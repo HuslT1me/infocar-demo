@@ -1,0 +1,45 @@
+.wallet {
+  border: 1px solid var(--color-gray);
+  border-radius: var(--br-radius);
+  padding-block: 55px;
+  inline-size: 100%;
+}
+
+.wallet__balance-block {
+  margin-block-end: 20px;
+}
+
+.wallet__ballance-text {
+  font-size: 20px;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.wallet__ballance {
+  font-weight: 700;
+}
+
+.wallet__payment {
+  text-align: center;
+}
+
+.wallet__payment-text {
+  margin-block-end: 20px;
+}
+
+.wallet__partner-logo {
+  margin: 0 auto 10px;
+}
+
+.wallet__decor-elem {
+  margin-block-end: 10px;
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+.wallet__select-text {
+  display: block;
+  margin-block-end: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}

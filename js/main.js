@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       openBurgerMenu();
     }
-    console.log("click");
   }
 
   function openBurgerMenu() {
@@ -65,33 +64,43 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  restoreButton.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const containerForm = document.querySelector('.form');
-    const phoneValue = containerForm.querySelector('.input--phone-number').value;
-
-  });
-  
-
   // Забыл пароль
-  //   $('#reset_link').on('click', function (e) {
-  //     e.preventDefault();
+  if (restoreButton) {
+    restoreButton.addEventListener("click", (e) => {
+      e.preventDefault();
 
-  //     let phone = $('#phone').val();
-  //     let prefix = $('#prefix').val();
-  //     let div = $('#forgot');
-  //     if(!phone) return alert('Introduceți numărul de telefon');
-  //     div.html('Trimiterea SMS...');
-  //     jQuery.ajax({
-  //         type: 'POST',
-  //         url: '/site/request-password-reset',
-  //         data: {prefix: prefix, phone: phone},
-  //         success: function (msg) {
-  //             div.html('<span style="color:green">Cod nou trimis prin SMS</span>');
-  //             }
-  //     });
-  // });
+      const containerForm = document.querySelector(".form");
+      const phoneValue = containerForm.querySelector(
+        ".input--phone-number"
+      ).value;
+      const prefix = document.querySelector("#prefix"); //позже исправить на инпут вэлью
+      const forgotWrapper = document.querySelector("#forgot");
+
+      if (!phoneValue) return alert("Introduceți numărul de telefon");
+      forgotWrapper.innerHTML = `<p class="green-strings-nikita">Trimiterea SMS...</p>`;
+
+      fetch("https://infocar.md/login/site/request-password-reset", {
+        mode: "no-cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prefix: prefix.value, phone: phoneValue }),
+      })
+        .then((res) => {
+          console.log(res);
+          if (res.ok) {
+            return res.json();
+          }
+          throw new Error(res.status);
+        })
+        .then((msg) => {
+          console.log(msg);
+          forgotWrapper.innerHTML = `<span style="color:green">Cod nou trimis prin SMS</span>`;
+        })
+        .catch((error) => console.error(error));
+    });
+  }
 
   // Alerts (не доделали)
   //   if ($('.overlay-popup').length) {
@@ -103,6 +112,43 @@ document.addEventListener("DOMContentLoaded", () => {
   //     $('.popup').hide();
   //     $('html, body').css('overflow', '');
   // });
+
+  const modal = document.querySelector(".dialog");
+  const modalButton = document.querySelector("#modal-button");
+  const closeModalButton = document.querySelector("#close-modal");
+
+  if (modal) {
+    function openModal() {
+      modal.showModal();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.close();
+      document.body.style.overflow = "";
+    }
+
+    modalButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+
+    closeModalButton.addEventListener("click", (e) => {
+      closeModal();
+    });
+
+    function closeModalOnOverlay({ currentTarget, target }) {
+      const modal = currentTarget,
+        clickOnOverlay = target === modal;
+
+      if (clickOnOverlay) {
+        closeModal();
+      }
+    }
+
+    modal.addEventListener("click", closeModalOnOverlay);
+    modal.addEventListener("cancel", () => closeModal());
+  }
 });
 
 // есть ли функции которые не используются

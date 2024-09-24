@@ -1,0 +1,121 @@
+.form {
+  max-inline-size: calc(100% - 40px);
+}
+
+.form__data-block {
+  margin-block-end: 25px;
+}
+
+.form__data-block-title {
+  margin-block-end: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form__data-block-inner {
+  margin-block-end: 20px;
+}
+
+.form__data-block-inner--location {
+  display: flex;
+  column-gap: 20px;
+}
+
+.form__type-block {
+  margin-block-end: 40px;
+}
+
+.form__type-block--motor,
+.form__type-block--hybrid,
+.form__type-block--fuel {
+  display: none;
+}
+
+:has(.form__data-block-radio[value='passenger']:checked) .form__type-block--motor {
+  display: block;
+}
+
+:has(.form__data-block-radio[value='hybrid']:checked) .form__type-block--hybrid {
+  display: block;
+}
+
+:has(.form__data-block-radio[name='type-hybrid']:checked) .form__type-block--fuel {
+  display: block;
+}
+
+.form__type-block-title {
+  margin-block-end: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.form__data-block-label {
+  display: block;
+  margin-block-end: 5px;
+}
+
+.form__input-wrapper {
+  margin-block-end: 15px;
+}
+
+.form__additional-wrapper {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.form__data-block-select {
+  margin-block-end: 0;
+  max-inline-size: 100%;
+}
+
+.form__data-block-inner--radio {
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  padding-inline: 20px;
+}
+
+.form__input-wrapper--euro,
+.form__input-wrapper--dollar,
+.form__input-wrapper--lei {
+  display: none;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.form__radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.form__radio-wrapper--alt {
+  flex-direction: row;
+}
+
+.form__price-radios {
+  display: flex;
+  column-gap: 30px;
+}
+
+:has(.form__data-block-radio[value='euro']:checked) .form__input-wrapper--euro,
+:has(.form__data-block-radio[value='dollar']:checked) .form__input-wrapper--dollar,
+:has(.form__data-block-radio[value='lei']:checked) .form__input-wrapper--lei {
+  display: block;
+}
+
+@media (768px > width) {
+  .form {
+    max-inline-size: 100%;
+  }
+
+  .form__data-block-inner--radio {
+    padding-inline: 0;
+  }
+
+  .form__label-radio {
+    text-align: center;
+  }
+}

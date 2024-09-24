@@ -98,6 +98,10 @@
  button {
    font: inherit;
  }
+
+ input {
+  margin: 0;
+ }
  
  html {
    /**

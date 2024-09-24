@@ -1,0 +1,9 @@
+.pers-cabinet__inner {
+  margin-inline: auto;
+  max-inline-size: 325px;
+}
+
+.pers-cabinet-text {
+  text-align: center;
+  margin-block-end: 25px;
+}
