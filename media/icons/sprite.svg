@@ -524,4 +524,10 @@
         <rect x="1.41422" width="20" height="2" rx="1" transform="rotate(45 1.41422 0)" fill="#3878C2"></rect>
         <rect x="0.000152588" y="14.1422" width="20" height="2" rx="1" transform="rotate(-45 0.000152588 14.1422)" fill="#3878C2"></rect>
     </symbol>
+
+    <symbol id="circle" width="20" height="35" viewBox="0 0 20 35" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="5" r="5" fill="#F1F1F3"></circle>
+        <circle cx="10" cy="25" r="10" fill="#F1F1F3"></circle>
+    </symbol>
 </svg>

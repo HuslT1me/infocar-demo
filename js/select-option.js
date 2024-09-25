@@ -54,7 +54,7 @@ function selectOption() {
   Inputmask({ mask: this.querySelector(".iconify").dataset.mask }).mask(
     document.querySelector("#phone")
   );
-  //document.querySelector('#phone').placeholder = this.querySelector('.iconify').dataset.mask.replace(/9/gi,'_');
+  document.querySelector('#phone').placeholder = this.querySelector('.iconify').dataset.mask.replace(/9/gi,'_');
   selected_option.innerHTML = "";
   selected_option.append(icon, " ", phone_code);
   input_box.value = phone_code.innerText;

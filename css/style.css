@@ -72,6 +72,8 @@ a {
 }
 
 .wrapper {
+  margin-inline: auto;
+  max-inline-size: calc(var(--container-width) + var(--container-padding-x) * 2);
   block-size: 100%;
   overflow: hidden;
 }
@@ -82,6 +84,7 @@ a {
   right: 0;
   grid-template-rows: auto 1fr auto;
   transition: right 0.3s;
+
   min-block-size: 100vh;
 }
 
@@ -127,7 +130,8 @@ a {
 .header__main-content {
   display: flex;
   column-gap: 20px;
-  align-items: baseline;
+  align-items: center;
+  order: 4;
 }
 
 .header__logged-block {
@@ -138,15 +142,14 @@ a {
   display: flex;
 }
 
-.header__burger-block {
-  display: none;
+.header__burger-wrapper {
+  padding-block: 8px;
 }
 
 .header__burger-btn {
   display: flex;
   position: relative;
   transition: all 0.4s ease;
-  margin-right: 10px;
   border: none;
   background: var(--color-accent);
   padding-inline-start: 0;
@@ -302,7 +305,7 @@ a {
   margin-block-end: 25px;
 }
 
-.search__idnv-block.active { 
+.search__idnv-block.active {
   display: flex;
 }
 
@@ -349,6 +352,50 @@ a {
   padding: 15px;
 }
 
+.input-wrapper--state {
+  justify-content: space-between;
+  align-items: center;
+  outline: transparent;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--br-radius);
+  padding: 8px 8px 8px 53px;
+  inline-size: 100%;
+  block-size: var(--input-height);
+}
+
+.input-mini {
+  top: 4px;
+  outline: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--br-radius);
+  background: transparent !important;
+  inline-size: 100%;
+  max-inline-size: 110px;
+  block-size: 50px;
+  font-size: 30px;
+  font-family: 'FE-font', sans-serif;
+  text-align: center;
+}
+
+.input-mini:focus {
+  transition: var(--transition-duration);
+  border-color: var(--color-dark-gray-alt);
+}
+
+.icon--circle {
+  inline-size: 100%;
+  max-inline-size: 20px;
+  block-size: 100%;
+}
+
+.input-mini--letters {
+  left: 54px;
+}
+
+.input-mini--numbers {
+  right: 10px;
+}
+
 .search__state-number,
 .search__vin-code {
   user-select: none;
@@ -391,7 +438,7 @@ a {
 }
 
 .search__automobile:has(.search__checkbox--state:checked) .input-wrapper--state {
-  display: block;
+  display: flex;
 }
 
 .search__automobile:has(.search__checkbox--vin:checked) .input-wrapper--vin {
@@ -457,7 +504,7 @@ a {
   display: none;
 }
 
-.password.active { 
+.password.active {
   display: block;
 }
 
@@ -557,6 +604,8 @@ a {
 }
 
 .contacts--burger {
+  row-gap: 15px;
+  flex-direction: column;
   padding-block: 10px;
 }
 
@@ -824,30 +873,25 @@ a {
     min-block-size: 90px;
   }
 
-  .header__burger-block {
-    display: flex;
+  .header__burger-btn::before {
+    translate: 0 -5px;
   }
 
   .header__partner-logo {
     order: 1;
-    inline-size: 45px;
-    block-size: 28px;
-  }
-
-  .header__main-content {
-    column-gap: 20px;
-    align-items: center;
-    order: 4;
+    inline-size: 36px;
+    block-size: auto;
   }
 
   .header__logged-block {
     order: 3;
   }
 
-  .header__project-logo {
+  .header__project-logo,
+  .footer__logo--project {
     order: 2;
-    inline-size: 98px;
-    block-size: 100%;
+    inline-size: 70px;
+    block-size: auto;
   }
 
   .report__inner {
@@ -885,7 +929,12 @@ a {
   }
 }
 
-@media (370px > width) {
+@media (390px > width) {
+  .search__agreement-label {
+    align-items: baseline;
+    text-align: left;
+  }
+
   .report__inner {
     grid-template-columns: repeat(1, 1fr);
   }
