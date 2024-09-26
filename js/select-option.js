@@ -47,14 +47,20 @@ for (country of countries) {
   options = document.querySelectorAll(".option");
 }
 
-function selectOption() {
-  console.log(this);
-  const icon = this.querySelector(".iconify").cloneNode(true),
-    phone_code = this.querySelector("strong").cloneNode(true);
-  Inputmask({ mask: this.querySelector(".iconify").dataset.mask }).mask(
+
+
+function selectOption(temp) {
+  let context = this;
+  if (temp !== null) {
+    context = temp;
+  }
+  console.log(context);
+  const icon = context.querySelector(".iconify").cloneNode(true),
+    phone_code = context.querySelector("strong").cloneNode(true);
+  Inputmask({ mask: context.querySelector(".iconify").dataset.mask }).mask(
     document.querySelector("#phone")
   );
-  document.querySelector('#phone').placeholder = this.querySelector('.iconify').dataset.mask.replace(/9/gi,'_');
+  // document.querySelector('#phone').placeholder = this.querySelector('.iconify').dataset.mask.replace(/9/gi,'_');
   selected_option.innerHTML = "";
   selected_option.append(icon, " ", phone_code);
   input_box.value = phone_code.innerText;
@@ -69,4 +75,5 @@ selected_option.addEventListener("click", () => {
   select_box.classList.toggle("active");
   selected_option.classList.toggle("active");
 });
-options.forEach((option) => option.addEventListener("click", selectOption));
+options.forEach((option) => option.addEventListener("click", () => selectOption(option)));
+selectOption(options[0]);

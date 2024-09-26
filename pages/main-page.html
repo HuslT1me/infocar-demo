@@ -142,15 +142,15 @@
                 </div>
                 <div class="phone-number">
                   <label class="label label--phone-number"> Введите номер телефона </label>
-                  <!-- <input type="hidden" name="prefix" id="prefix" value="373" /> -->
-                  <div class="input-wrapper input-wrapper--phone-number">
+                  <input type="hidden" name="prefix" id="prefix" value="373" />
+                  <!-- <div class="input-wrapper input-wrapper--phone-number">
                     <span class="phone-number__input-decor-prefix">
                       <img class="phone-number__input-flag-img" src="../media/icons/flag-md.svg" alt="" />
                       +373
                     </span>
                     <input class="input input--phone-number" type="tel" />
-                  </div>
-                  <!-- <div class="select-box">
+                  </div> -->
+                  <div class="select-box">
                     <div class="selected-option">
                       <div>
                         <svg
@@ -515,7 +515,7 @@
                     <div class="options">
                       <ol></ol>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
                 <div class="password">
                   <label class="label label--password"> Пароль (СМС код) - 6 цифр </label>
@@ -627,8 +627,29 @@
         </div>
       </dialog>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/jquery.inputmask.js"></script>
+    <script>
+      var inputmask_13fc5cf8 = { mask: '99-999-999' };
+    </script>
+    <script>
+      let txt_1 = 'Будут удалены все отчёты и ваша учётная запись!';
+      let txt_2 = 'Проверяем автомобиль...';
+      let txt_3 = 'Вернуться в начало';
+      let txt_4 = 'Введите идентификационные данные автомобиля';
+      let txt_5 = 'Введите номер телефона';
+      let txt_6 = 'Неверный пароль';
+      let txt_7 = 'Пользователь не найден';
+      let txt_8 = 'Код подтверждения введен неверно';
+      let txt_9 = 'Вы должны согласиться с условиями соглашения';
+    </script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="../js/main.js"></script>
-    <!-- <script src="../js/select-option.js"></script> -->
+    <script src="../js/select-option.js"></script>
     <script src="../js/gn-mask.js"></script>
     <script src="../js/fslightbox.js"></script>
   </body>
